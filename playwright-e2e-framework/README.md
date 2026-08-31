@@ -1,4 +1,4 @@
-# Scalable E2E Web Automation Framework
+``# Scalable E2E Web Automation Framework
 
 A production-style end-to-end test automation framework built with **Playwright**, **JavaScript**, and **Node.js**, wired into a **GitHub Actions** CI/CD pipeline. Tests run against [SauceDemo](https://www.saucedemo.com), a stable public demo app, so the suite runs out of the box — swap `BASE_URL` to point at your own app.
 
