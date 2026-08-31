@@ -1,0 +1,1486 @@
+<testsuites id="" name="" tests="69" failures="0" skipped="0" errors="46" time="79.92551300000001">
+<testsuite name="auth.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="chromium" tests="9" failures="0" skipped="0" time="11.751" errors="0">
+<testcase name="User Authentication › logs in successfully with valid standard-user credentials @smoke" classname="auth.spec.js" time="1.328">
+</testcase>
+<testcase name="User Authentication › logs out successfully and returns to the login screen" classname="auth.spec.js" time="2.233">
+</testcase>
+<testcase name="User Authentication › rejects login for a locked-out user with a clear error message" classname="auth.spec.js" time="1.268">
+</testcase>
+<testcase name="User Authentication › rejects login with invalid credentials" classname="auth.spec.js" time="1.233">
+</testcase>
+<testcase name="User Authentication › shows a validation error when the password field is empty" classname="auth.spec.js" time="0.987">
+</testcase>
+<testcase name="User Authentication › shows a validation error when the username field is empty" classname="auth.spec.js" time="1.158">
+</testcase>
+<testcase name="User Authentication › shows a validation error when both fields are empty" classname="auth.spec.js" time="0.92">
+</testcase>
+<testcase name="User Authentication › allows dismissing the error banner and retrying login" classname="auth.spec.js" time="1.422">
+</testcase>
+<testcase name="User Authentication › is case-sensitive and rejects a mixed-case username @edge" classname="auth.spec.js" time="1.202">
+</testcase>
+</testsuite>
+<testsuite name="checkout.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="chromium" tests="6" failures="0" skipped="0" time="9.105" errors="0">
+<testcase name="Checkout - Data Input Forms › completes checkout end-to-end with valid customer information @smoke" classname="checkout.spec.js" time="1.508">
+</testcase>
+<testcase name="Checkout - Data Input Forms › calculates order total as subtotal plus tax correctly" classname="checkout.spec.js" time="1.432">
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when first name is missing @edge" classname="checkout.spec.js" time="1.633">
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when last name is missing @edge" classname="checkout.spec.js" time="1.504">
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when postal code is missing @edge" classname="checkout.spec.js" time="1.558">
+</testcase>
+<testcase name="Checkout - Data Input Forms › allows returning to shopping from the cart before checkout" classname="checkout.spec.js" time="1.47">
+</testcase>
+</testsuite>
+<testsuite name="inventory.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="chromium" tests="8" failures="0" skipped="0" time="11.292" errors="0">
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products from A to Z @smoke" classname="inventory.spec.js" time="1.442">
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products from Z to A" classname="inventory.spec.js" time="1.293">
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products by price low to high" classname="inventory.spec.js" time="1.286">
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products by price high to low" classname="inventory.spec.js" time="1.325">
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are added" classname="inventory.spec.js" time="1.541">
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are removed" classname="inventory.spec.js" time="1.709">
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › does not show a cart badge when the cart is empty @edge" classname="inventory.spec.js" time="1.278">
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › carries added items through to the cart page" classname="inventory.spec.js" time="1.418">
+</testcase>
+</testsuite>
+<testsuite name="auth.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="firefox" tests="9" failures="0" skipped="0" time="63.764" errors="9">
+<testcase name="User Authentication › logs in successfully with valid standard-user credentials @smoke" classname="auth.spec.js" time="11.018">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-l-8159b-dard-user-credentials-smoke-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|auth-User-Authentication-l-8159b-dard-user-credentials-smoke-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-l-8159b-dard-user-credentials-smoke-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:14:3 › User Authentication › logs in successfully with valid standard-user credentials @smoke 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-l-8159b-dard-user-credentials-smoke-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-l-8159b-dard-user-credentials-smoke-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-l-8159b-dard-user-credentials-smoke-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › logs out successfully and returns to the login screen" classname="auth.spec.js" time="9.746">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-l-38a7e-returns-to-the-login-screen-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|auth-User-Authentication-l-38a7e-returns-to-the-login-screen-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-l-38a7e-returns-to-the-login-screen-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:23:3 › User Authentication › logs out successfully and returns to the login screen 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-l-38a7e-returns-to-the-login-screen-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-l-38a7e-returns-to-the-login-screen-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-l-38a7e-returns-to-the-login-screen-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › rejects login for a locked-out user with a clear error message" classname="auth.spec.js" time="10.503">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-r-04510--with-a-clear-error-message-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|auth-User-Authentication-r-04510--with-a-clear-error-message-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-r-04510--with-a-clear-error-message-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:35:3 › User Authentication › rejects login for a locked-out user with a clear error message 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-r-04510--with-a-clear-error-message-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-r-04510--with-a-clear-error-message-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-r-04510--with-a-clear-error-message-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › rejects login with invalid credentials" classname="auth.spec.js" time="11.071">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-r-22146-in-with-invalid-credentials-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-r-22146-in-with-invalid-credentials-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:42:3 › User Authentication › rejects login with invalid credentials ─────
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-r-22146-in-with-invalid-credentials-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-r-22146-in-with-invalid-credentials-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › shows a validation error when the password field is empty" classname="auth.spec.js" time="3.713">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-s-3a8ab-the-password-field-is-empty-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|auth-User-Authentication-s-3a8ab-the-password-field-is-empty-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-s-3a8ab-the-password-field-is-empty-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:49:3 › User Authentication › shows a validation error when the password field is empty 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-s-3a8ab-the-password-field-is-empty-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-s-3a8ab-the-password-field-is-empty-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-s-3a8ab-the-password-field-is-empty-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › shows a validation error when the username field is empty" classname="auth.spec.js" time="4.29">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-s-b5970-the-username-field-is-empty-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|auth-User-Authentication-s-b5970-the-username-field-is-empty-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-s-b5970-the-username-field-is-empty-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:56:3 › User Authentication › shows a validation error when the username field is empty 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-s-b5970-the-username-field-is-empty-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-s-b5970-the-username-field-is-empty-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-s-b5970-the-username-field-is-empty-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › shows a validation error when both fields are empty" classname="auth.spec.js" time="4.323">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-s-c2a91--when-both-fields-are-empty-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|auth-User-Authentication-s-c2a91--when-both-fields-are-empty-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-s-c2a91--when-both-fields-are-empty-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:63:3 › User Authentication › shows a validation error when both fields are empty 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-s-c2a91--when-both-fields-are-empty-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-s-c2a91--when-both-fields-are-empty-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-s-c2a91--when-both-fields-are-empty-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › allows dismissing the error banner and retrying login" classname="auth.spec.js" time="3.513">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-a-e50bd-r-banner-and-retrying-login-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|auth-User-Authentication-a-e50bd-r-banner-and-retrying-login-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-a-e50bd-r-banner-and-retrying-login-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:69:3 › User Authentication › allows dismissing the error banner and retrying login 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-a-e50bd-r-banner-and-retrying-login-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-a-e50bd-r-banner-and-retrying-login-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-a-e50bd-r-banner-and-retrying-login-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › is case-sensitive and rejects a mixed-case username @edge" classname="auth.spec.js" time="5.587">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-i-eeb46--a-mixed-case-username-edge-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|auth-User-Authentication-i-eeb46--a-mixed-case-username-edge-firefox\video.webm]]
+
+[[ATTACHMENT|auth-User-Authentication-i-eeb46--a-mixed-case-username-edge-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › auth.spec.js:80:3 › User Authentication › is case-sensitive and rejects a mixed-case username @edge 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\auth.spec.js:11:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-i-eeb46--a-mixed-case-username-edge-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\auth-User-Authentication-i-eeb46--a-mixed-case-username-edge-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\auth-User-Authentication-i-eeb46--a-mixed-case-username-edge-firefox\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="checkout.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="firefox" tests="6" failures="0" skipped="0" time="29.867" errors="6">
+<testcase name="Checkout - Data Input Forms › completes checkout end-to-end with valid customer information @smoke" classname="checkout.spec.js" time="4.894">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-7d17c--customer-information-smoke-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-7d17c--customer-information-smoke-firefox\video.webm]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-7d17c--customer-information-smoke-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › checkout.spec.js:28:3 › Checkout - Data Input Forms › completes checkout end-to-end with valid customer information @smoke 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\checkout.spec.js:19:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-7d17c--customer-information-smoke-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-7d17c--customer-information-smoke-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-7d17c--customer-information-smoke-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › calculates order total as subtotal plus tax correctly" classname="checkout.spec.js" time="4.138">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-26ff7-subtotal-plus-tax-correctly-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-26ff7-subtotal-plus-tax-correctly-firefox\video.webm]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-26ff7-subtotal-plus-tax-correctly-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › checkout.spec.js:41:3 › Checkout - Data Input Forms › calculates order total as subtotal plus tax correctly 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\checkout.spec.js:19:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-26ff7-subtotal-plus-tax-correctly-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-26ff7-subtotal-plus-tax-correctly-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-26ff7-subtotal-plus-tax-correctly-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when first name is missing @edge" classname="checkout.spec.js" time="4.984">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-38ba0--first-name-is-missing-edge-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-38ba0--first-name-is-missing-edge-firefox\video.webm]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-38ba0--first-name-is-missing-edge-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › checkout.spec.js:54:3 › Checkout - Data Input Forms › blocks checkout when first name is missing @edge 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\checkout.spec.js:19:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-38ba0--first-name-is-missing-edge-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-38ba0--first-name-is-missing-edge-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-38ba0--first-name-is-missing-edge-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when last name is missing @edge" classname="checkout.spec.js" time="3.987">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-5034d-n-last-name-is-missing-edge-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-5034d-n-last-name-is-missing-edge-firefox\video.webm]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-5034d-n-last-name-is-missing-edge-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › checkout.spec.js:61:3 › Checkout - Data Input Forms › blocks checkout when last name is missing @edge 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\checkout.spec.js:19:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-5034d-n-last-name-is-missing-edge-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-5034d-n-last-name-is-missing-edge-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-5034d-n-last-name-is-missing-edge-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when postal code is missing @edge" classname="checkout.spec.js" time="6.175">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-39a88-postal-code-is-missing-edge-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-39a88-postal-code-is-missing-edge-firefox\video.webm]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-39a88-postal-code-is-missing-edge-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › checkout.spec.js:68:3 › Checkout - Data Input Forms › blocks checkout when postal code is missing @edge 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\checkout.spec.js:19:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-39a88-postal-code-is-missing-edge-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-39a88-postal-code-is-missing-edge-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-39a88-postal-code-is-missing-edge-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › allows returning to shopping from the cart before checkout" classname="checkout.spec.js" time="5.689">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-d8ee4-om-the-cart-before-checkout-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-d8ee4-om-the-cart-before-checkout-firefox\video.webm]]
+
+[[ATTACHMENT|checkout-Checkout---Data-I-d8ee4-om-the-cart-before-checkout-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › checkout.spec.js:75:3 › Checkout - Data Input Forms › allows returning to shopping from the cart before checkout 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\checkout.spec.js:19:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-d8ee4-om-the-cart-before-checkout-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\checkout-Checkout---Data-I-d8ee4-om-the-cart-before-checkout-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-d8ee4-om-the-cart-before-checkout-firefox\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="inventory.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="firefox" tests="8" failures="0" skipped="0" time="37.55" errors="8">
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products from A to Z @smoke" classname="inventory.spec.js" time="4.031">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-18ee4--products-from-A-to-Z-smoke-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-18ee4--products-from-A-to-Z-smoke-firefox\video.webm]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-18ee4--products-from-A-to-Z-smoke-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › inventory.spec.js:20:3 › Dynamic UI Interactions - Product Inventory › sorts products from A to Z @smoke 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\inventory.spec.js:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-18ee4--products-from-A-to-Z-smoke-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-18ee4--products-from-A-to-Z-smoke-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-18ee4--products-from-A-to-Z-smoke-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products from Z to A" classname="inventory.spec.js" time="3.155">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-31a0d--sorts-products-from-Z-to-A-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-31a0d--sorts-products-from-Z-to-A-firefox\video.webm]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-31a0d--sorts-products-from-Z-to-A-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › inventory.spec.js:28:3 › Dynamic UI Interactions - Product Inventory › sorts products from Z to A 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\inventory.spec.js:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-31a0d--sorts-products-from-Z-to-A-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-31a0d--sorts-products-from-Z-to-A-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-31a0d--sorts-products-from-Z-to-A-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products by price low to high" classname="inventory.spec.js" time="7.374">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-94825-oducts-by-price-low-to-high-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-94825-oducts-by-price-low-to-high-firefox\video.webm]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-94825-oducts-by-price-low-to-high-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › inventory.spec.js:36:3 › Dynamic UI Interactions - Product Inventory › sorts products by price low to high 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\inventory.spec.js:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-94825-oducts-by-price-low-to-high-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-94825-oducts-by-price-low-to-high-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-94825-oducts-by-price-low-to-high-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products by price high to low" classname="inventory.spec.js" time="3.448">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-c2d66-oducts-by-price-high-to-low-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-c2d66-oducts-by-price-high-to-low-firefox\video.webm]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-c2d66-oducts-by-price-high-to-low-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › inventory.spec.js:44:3 › Dynamic UI Interactions - Product Inventory › sorts products by price high to low 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\inventory.spec.js:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-c2d66-oducts-by-price-high-to-low-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-c2d66-oducts-by-price-high-to-low-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-c2d66-oducts-by-price-high-to-low-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are added" classname="inventory.spec.js" time="6.467">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-d731c-amically-as-items-are-added-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-d731c-amically-as-items-are-added-firefox\video.webm]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-d731c-amically-as-items-are-added-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › inventory.spec.js:52:3 › Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are added 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\inventory.spec.js:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-d731c-amically-as-items-are-added-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-d731c-amically-as-items-are-added-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-d731c-amically-as-items-are-added-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are removed" classname="inventory.spec.js" time="5.449">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-3dd1b-ically-as-items-are-removed-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-3dd1b-ically-as-items-are-removed-firefox\video.webm]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-3dd1b-ically-as-items-are-removed-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › inventory.spec.js:62:3 › Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are removed 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\inventory.spec.js:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-3dd1b-ically-as-items-are-removed-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-3dd1b-ically-as-items-are-removed-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-3dd1b-ically-as-items-are-removed-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › does not show a cart badge when the cart is empty @edge" classname="inventory.spec.js" time="2.998">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-b7334-when-the-cart-is-empty-edge-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-b7334-when-the-cart-is-empty-edge-firefox\video.webm]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-b7334-when-the-cart-is-empty-edge-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › inventory.spec.js:71:3 › Dynamic UI Interactions - Product Inventory › does not show a cart badge when the cart is empty @edge 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\inventory.spec.js:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-b7334-when-the-cart-is-empty-edge-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-b7334-when-the-cart-is-empty-edge-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-b7334-when-the-cart-is-empty-edge-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › carries added items through to the cart page" classname="inventory.spec.js" time="4.628">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-957e0-ms-through-to-the-cart-page-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-957e0-ms-through-to-the-cart-page-firefox\video.webm]]
+
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-957e0-ms-through-to-the-cart-page-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE" type="Error">
+<![CDATA[  [firefox] › inventory.spec.js:75:3 › Dynamic UI Interactions - Product Inventory › carries added items through to the cart page 
+
+    Error: page.goto: NS_ERROR_UNKNOWN_SOCKET_TYPE
+    Call log:
+      - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+       at ..\pages\BasePage.js:15
+
+      13 |
+      14 |   async goto(path = '/') {
+    > 15 |     await this.page.goto(path);
+         |                     ^
+      16 |   }
+      17 |
+      18 |   /** @param {string} title */
+        at LoginPage.goto (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\BasePage.js:15:21)
+        at LoginPage.open (C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\pages\LoginPage.js:21:16)
+        at C:\Users\vital\Downloads\playwright-e2e-framework\playwright-e2e-framework\tests\inventory.spec.js:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-957e0-ms-through-to-the-cart-page-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\inventory-Dynamic-UI-Inter-957e0-ms-through-to-the-cart-page-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-957e0-ms-through-to-the-cart-page-firefox\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="auth.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="webkit" tests="9" failures="0" skipped="0" time="0.106" errors="9">
+<testcase name="User Authentication › logs in successfully with valid standard-user credentials @smoke" classname="auth.spec.js" time="0.003">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-l-8159b-dard-user-credentials-smoke-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:14:3 › User Authentication › logs in successfully with valid standard-user credentials @smoke 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-l-8159b-dard-user-credentials-smoke-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › logs out successfully and returns to the login screen" classname="auth.spec.js" time="0.005">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-l-38a7e-returns-to-the-login-screen-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:23:3 › User Authentication › logs out successfully and returns to the login screen 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-l-38a7e-returns-to-the-login-screen-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › rejects login for a locked-out user with a clear error message" classname="auth.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-r-04510--with-a-clear-error-message-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:35:3 › User Authentication › rejects login for a locked-out user with a clear error message 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-r-04510--with-a-clear-error-message-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › rejects login with invalid credentials" classname="auth.spec.js" time="0.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-r-22146-in-with-invalid-credentials-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:42:3 › User Authentication › rejects login with invalid credentials ──────
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-r-22146-in-with-invalid-credentials-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › shows a validation error when the password field is empty" classname="auth.spec.js" time="0.01">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-s-3a8ab-the-password-field-is-empty-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:49:3 › User Authentication › shows a validation error when the password field is empty 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-s-3a8ab-the-password-field-is-empty-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › shows a validation error when the username field is empty" classname="auth.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-s-b5970-the-username-field-is-empty-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:56:3 › User Authentication › shows a validation error when the username field is empty 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-s-b5970-the-username-field-is-empty-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › shows a validation error when both fields are empty" classname="auth.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-s-c2a91--when-both-fields-are-empty-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:63:3 › User Authentication › shows a validation error when both fields are empty 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-s-c2a91--when-both-fields-are-empty-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › allows dismissing the error banner and retrying login" classname="auth.spec.js" time="0.026">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-a-e50bd-r-banner-and-retrying-login-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:69:3 › User Authentication › allows dismissing the error banner and retrying login 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-a-e50bd-r-banner-and-retrying-login-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="User Authentication › is case-sensitive and rejects a mixed-case username @edge" classname="auth.spec.js" time="0.041">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|auth-User-Authentication-i-eeb46--a-mixed-case-username-edge-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › auth.spec.js:80:3 › User Authentication › is case-sensitive and rejects a mixed-case username @edge 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\auth-User-Authentication-i-eeb46--a-mixed-case-username-edge-webkit\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="checkout.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="webkit" tests="6" failures="0" skipped="0" time="0.033" errors="6">
+<testcase name="Checkout - Data Input Forms › completes checkout end-to-end with valid customer information @smoke" classname="checkout.spec.js" time="0.003">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-7d17c--customer-information-smoke-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › checkout.spec.js:28:3 › Checkout - Data Input Forms › completes checkout end-to-end with valid customer information @smoke 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-7d17c--customer-information-smoke-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › calculates order total as subtotal plus tax correctly" classname="checkout.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-26ff7-subtotal-plus-tax-correctly-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › checkout.spec.js:41:3 › Checkout - Data Input Forms › calculates order total as subtotal plus tax correctly 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-26ff7-subtotal-plus-tax-correctly-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when first name is missing @edge" classname="checkout.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-38ba0--first-name-is-missing-edge-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › checkout.spec.js:54:3 › Checkout - Data Input Forms › blocks checkout when first name is missing @edge 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-38ba0--first-name-is-missing-edge-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when last name is missing @edge" classname="checkout.spec.js" time="0.013">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-5034d-n-last-name-is-missing-edge-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › checkout.spec.js:61:3 › Checkout - Data Input Forms › blocks checkout when last name is missing @edge 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-5034d-n-last-name-is-missing-edge-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › blocks checkout when postal code is missing @edge" classname="checkout.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-39a88-postal-code-is-missing-edge-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › checkout.spec.js:68:3 › Checkout - Data Input Forms › blocks checkout when postal code is missing @edge 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-39a88-postal-code-is-missing-edge-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Checkout - Data Input Forms › allows returning to shopping from the cart before checkout" classname="checkout.spec.js" time="0.005">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|checkout-Checkout---Data-I-d8ee4-om-the-cart-before-checkout-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › checkout.spec.js:75:3 › Checkout - Data Input Forms › allows returning to shopping from the cart before checkout 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\checkout-Checkout---Data-I-d8ee4-om-the-cart-before-checkout-webkit\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="inventory.spec.js" timestamp="2026-08-31T05:50:33.570Z" hostname="webkit" tests="8" failures="0" skipped="0" time="0.035" errors="8">
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products from A to Z @smoke" classname="inventory.spec.js" time="0.003">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-18ee4--products-from-A-to-Z-smoke-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › inventory.spec.js:20:3 › Dynamic UI Interactions - Product Inventory › sorts products from A to Z @smoke 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-18ee4--products-from-A-to-Z-smoke-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products from Z to A" classname="inventory.spec.js" time="0.013">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-31a0d--sorts-products-from-Z-to-A-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › inventory.spec.js:28:3 › Dynamic UI Interactions - Product Inventory › sorts products from Z to A 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-31a0d--sorts-products-from-Z-to-A-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products by price low to high" classname="inventory.spec.js" time="0.003">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-94825-oducts-by-price-low-to-high-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › inventory.spec.js:36:3 › Dynamic UI Interactions - Product Inventory › sorts products by price low to high 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-94825-oducts-by-price-low-to-high-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › sorts products by price high to low" classname="inventory.spec.js" time="0.003">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-c2d66-oducts-by-price-high-to-low-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › inventory.spec.js:44:3 › Dynamic UI Interactions - Product Inventory › sorts products by price high to low 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-c2d66-oducts-by-price-high-to-low-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are added" classname="inventory.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-d731c-amically-as-items-are-added-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › inventory.spec.js:52:3 › Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are added 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-d731c-amically-as-items-are-added-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are removed" classname="inventory.spec.js" time="0.003">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-3dd1b-ically-as-items-are-removed-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › inventory.spec.js:62:3 › Dynamic UI Interactions - Product Inventory › updates the cart badge dynamically as items are removed 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-3dd1b-ically-as-items-are-removed-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › does not show a cart badge when the cart is empty @edge" classname="inventory.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-b7334-when-the-cart-is-empty-edge-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › inventory.spec.js:71:3 › Dynamic UI Interactions - Product Inventory › does not show a cart badge when the cart is empty @edge 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-b7334-when-the-cart-is-empty-edge-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dynamic UI Interactions - Product Inventory › carries added items through to the cart page" classname="inventory.spec.js" time="0.002">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|inventory-Dynamic-UI-Inter-957e0-ms-through-to-the-cart-page-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="browserType.launch: Host system is missing dependencies!" type="Error">
+<![CDATA[  [webkit] › inventory.spec.js:75:3 › Dynamic UI Interactions - Product Inventory › carries added items through to the cart page 
+
+    Error: browserType.launch: Host system is missing dependencies!
+
+    Full list of missing libraries:
+        libegl.dll
+
+
+    Error Context: ..\test-results\inventory-Dynamic-UI-Inter-957e0-ms-through-to-the-cart-page-webkit\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>
